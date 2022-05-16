@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300&display=swap" rel="stylesheet">
     <title>Guardei o Amor Aqui</title>
+
 </head>
 <body>
-    
+    <div class="main">
+        <div class="header">
+            <nav class="menu">
+                <h2>Guardei o Amor Aqui</h2>
+                <div class="navegacao">
+                    <h3>Cronologia</h3>
+                    <h3>Diário</h3>
+                    <h3>Depoimentos</h3>
+                    <h3>Álbum</h3>
+                    <h3>Especial</h3>
+                </div>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            
+            </nav>
+            <div class="contador">
+                <h1>Estamos a <span id="diasSpan"></span> dias esperando...</h1>
+            </div>
+        </div>
+        <div class="conteudo-flex-linha">
+            <h1>CONTEÚDO</h1>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var elemento = document.getElementById("diasSpan");
+        const hoje = new Date();
+        const inicio = new Date("2021-12-01");
+        const duracao = Math.abs(hoje.getTime() - inicio.getTime());
+        const totaldedias = Math.ceil(duracao / (1000 * 60 * 60 * 24));
+        elemento.innerHTML = totaldedias;
+    </script>
 </body>
 </html>
